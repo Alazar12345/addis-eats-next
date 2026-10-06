@@ -1,3 +1,5 @@
+import Cart from "@/componets/Cart/cart";
+
 export default function CartPage() {
-  return <h1>Cart</h1>;
-  }
+  return <Cart />;
+}

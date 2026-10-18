@@ -19,7 +19,7 @@ export default async function MenuPage({ searchParams }) {
         Page: {page}
       </p>
 
-      <SearchBox />
+      <SearchBox initialDishes={menu} />
 
 
       <FilterShell>

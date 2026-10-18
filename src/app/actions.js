@@ -1,5 +1,5 @@
 "use server";
-
+import { getSession } from "@/lib/auth";
 import { orderSchema } from "@/lib/schema";
 import { revalidatePath } from "next/cache";
 
@@ -38,26 +38,17 @@ export async function placeOrder(formData) {
 
 export async function cancelOrder(orderId) {
 
-  const session = {
-    userId: 1
-  };
+  const session = await getSession();
 
 
-  const order = {
-    id: orderId,
-    userId: 1
-  };
-
-
-  if (!session || session.userId !== order.userId) {
+  if (!session) {
     return {
       error: "Unauthorized"
     };
   }
 
 
-  console.log("Cancelled order:", orderId);
-
+  // check order owner here
 
   return {
     success: true

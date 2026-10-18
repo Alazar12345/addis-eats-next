@@ -5,7 +5,7 @@ import useSWR from "swr";
 import fetcher from "@/lib/fetcher";
 
 
-export default function SearchBox() {
+export default function SearchBox({ initialDishes }) {
 
   const [input, setInput] = useState("");
   const [search, setSearch] = useState("");
@@ -23,13 +23,16 @@ export default function SearchBox() {
   }, [input]);
 
 
-  const { data, error, isLoading } = useSWR(
-    `/api/dishes?search=${search}&page=${page}`,
-    fetcher,
-    {
-      keepPreviousData: true,
-    }
-  );
+ const { data } = useSWR(
+  search
+    ? `/api/dishes?search=${search}`
+    : null,
+  fetcher,
+  {
+    fallbackData: initialDishes,
+    keepPreviousData: true,
+  }
+);
 
 
   return (

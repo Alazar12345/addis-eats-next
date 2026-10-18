@@ -34,3 +34,34 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Production Build Output
+
+```text
+▲ Next.js 16.3.8 (Turbopack)
+
+✓ Running next.config.mjs took 224ms
+
+Creating an optimized production build ...
+
+✓ Compiled successfully in 9.4s
+✓ Finished TypeScript in 22ms
+✓ Collecting page data using 1 worker in 4.0s
+✓ Generating static pages using 1 worker (10/10) in 1251ms
+✓ Finalizing page optimization in 38ms
+
+Route (app)
+
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/dish
+├ ƒ /api/dish/[id]
+├ ƒ /api/dish/orders
+├ ○ /cart
+├ ○ /checkout
+├ ƒ /dish/[id]
+├ ○ /menu
+└ ○ /menu/id
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand

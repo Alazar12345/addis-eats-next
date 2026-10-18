@@ -146,3 +146,15 @@ Current client boundaries are limited to:
 - Providers
 
 This keeps the application optimized while maintaining required interactivity.
+# Component Boundary Map
+
+| Component | Environment | Reason |
+|---|---|---|
+| Layout | Server | Shared UI without browser state |
+| Header | Server | Only displays navigation |
+| Footer | Server | Static content |
+| Menu Page | Server | Displays server-rendered data |
+| Dish Card | Server | Only presents dish information |
+| Cart | Client | Uses interactive cart state |
+| Checkout Form | Client | Uses form state and submission feedback |
+| Buttons with events | Client | Requires browser interaction |

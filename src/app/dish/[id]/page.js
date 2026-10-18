@@ -4,9 +4,7 @@ import AddToCartButton from "@/componets/AddToCartButton/AddToCartButton";
 export default async function DishDetailPage({ params }) {
   const { id } = await params;
 
-  const dish = dishes.find(
-    (item) => item.id.toString() === id
-  );
+  const dish = dishes.find((item) => item.id.toString() === id);
 
   if (!dish) {
     return (
@@ -18,25 +16,15 @@ export default async function DishDetailPage({ params }) {
 
   return (
     <div>
-      <img
-        src={dish.image}
-        alt={dish.name}
-        width="300"
-      />
+      <img src={dish.image} alt={dish.name} width="300" />
 
       <h1>{dish.name}</h1>
 
-      <p>
-        {dish.description}
-      </p>
+      <p>{dish.description}</p>
 
-      <h2>
-        {dish.price} ETB
-      </h2>
+      <h2>{dish.price} ETB</h2>
 
-      
-    <AddToCartButton dish={dish} />
-      
+      <AddToCartButton dish={dish} />
     </div>
   );
 }

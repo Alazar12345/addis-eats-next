@@ -16,7 +16,7 @@ export default async function DishDetailPage({ params }) {
 
   return (
     <div>
-      <img src={dish.image} alt={dish.name} width="300" />
+      <img src={dish.image} alt={dish.name} width="300"/>
 
       <h1>{dish.name}</h1>
 

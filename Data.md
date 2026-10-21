@@ -38,6 +38,6 @@ Menu data does not change frequently, so caching reduces unnecessary requests.
 
 | Query | Side | Key | Refresh Rule | Reason |
 |---|---|---|---|---|
-| Order Status | Client with server seed | /api/orders/[id] | refreshInterval: 5000 | Order status changes while waiting |
-| Menu Search | Client | ["menu", search] | keepPreviousData: true | Prevents flashing between searches |
-| Menu Pagination | Client | ["menu", search, page] | staleTime: 60000 | Menu data does not change often |
+| Order status | Client + server seed | /api/orders/[id] | refreshInterval: 5000 | Status changes while waiting |
+| Menu search | Client | ["menu", search] | debounce + keepPreviousData | Prevents flashing |
+| Menu pagination | Client | ["menu", search, page] | staleTime | Reduces unnecessary requests |

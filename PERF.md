@@ -1,9 +1,8 @@
 # Performance Budget
 
-| Area | Before | After | Optimization |
+| Area | Before | After | Cause |
 |---|---|---|---|
-| Client Components | More client rendering | Server components by default | Reduced JavaScript sent to browser |
-| Order data | Client fetch only | Server seed + SWR polling | Faster first render |
-| Search | Requests per typing action | Debounced search | Reduced API calls |
-| Images | Normal images | Next Image optimization | Improved loading |
-| Data requests | Repeated fetching | Cache and SWR rules | Reduced unnecessary requests |
+| Client components | More JS sent | Server components used | Reduced bundle |
+| Search requests | Every keystroke | Debounced | Fewer API calls |
+| Order loading | Client fetch | Server seed + SWR | Faster first paint |
+| Images | Normal images | Next Image | Optimization |

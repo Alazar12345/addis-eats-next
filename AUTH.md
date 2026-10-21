@@ -1,7 +1,17 @@
+# Authentication Strategy
+
+## Protected Routes
+
+| Route | Layer | What it proves |
+|---|---|---|
+| /checkout | Authentication | Only logged-in users can place orders |
+| /orders/[id] | Ownership check | Users can only access their own orders |
+| /api/orders | Server validation | Invalid data is rejected |
+
 ## Attack Tests
 
-| Attack | Protection that stops it |
-|---|---|
-| User without account places order | Authentication layer |
-| User opens another user's order | Ownership check |
-| Invalid order data sent to API | Server validation |
+| Attack | Result | Protection |
+|---|---|---|
+| Guest tries checkout | Blocked | Authentication layer |
+| User requests another user's order | Blocked | Ownership check |
+| Invalid order payload sent | Rejected | Server validation |

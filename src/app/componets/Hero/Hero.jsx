@@ -1,4 +1,5 @@
 import "./Hero.css"
+import Image from "next/image";
 function Hero(){
     return(
         <section className="hero">
@@ -11,10 +12,13 @@ function Hero(){
                 <button>Explore menu</button>
             </div>
             <div className="hero-img">
-                <img src=""
-                 alt="Ethiopan Food"/>
-                 
-                
+                <Image 
+                src="/Ethiopian.png"
+                alt="ethiopan food bufe"
+                width={1600}
+                height={850}
+                />
+
             </div>
         </section>
     )

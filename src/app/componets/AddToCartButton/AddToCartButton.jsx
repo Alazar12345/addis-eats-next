@@ -1,6 +1,6 @@
 "use client";
 
-import useCartStore from "@/store/cartStore";
+import useCartStore from "@/app/store/cartStore";
 
 export default function AddToCartButton({ dish }) {
   const addToCart = useCartStore((state) => state.addToCart);

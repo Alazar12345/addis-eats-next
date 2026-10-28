@@ -1,4 +1,4 @@
-import { orderSchema } from "@/lib/schema";
+import { orderSchema } from "@/app/lib/schema";
 
 export async function POST(request) {
   const body = await request.json();
@@ -12,7 +12,7 @@ export async function POST(request) {
       },
       {
         status: 422,
-      }
+      },
     );
   }
 
@@ -23,6 +23,6 @@ export async function POST(request) {
     },
     {
       status: 201,
-    }
+    },
   );
 }

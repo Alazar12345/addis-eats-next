@@ -16,6 +16,21 @@ return (
 <main>
 
 <h1>Checkout</h1>
+{state?.success && (
+  <p>
+    {state.message}
+  </p>
+)}
+
+{state?.fieldErrors && (
+  <div>
+    {Object.values(state.fieldErrors).map((error, index) => (
+      <p key={index}>
+        {error}
+      </p>
+    ))}
+  </div>
+)}
 
 <form action={action}>
 

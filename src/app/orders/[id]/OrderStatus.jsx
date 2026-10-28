@@ -1,17 +1,17 @@
 "use client";
 
 import useSWR from "swr";
-import fetcher from "@/lib/fetcher";
+import fetcher from "@/app/lib/fetcher";
 
 export default function OrderStatus({ id, initialOrder }) {
-  const { data: order, error, isLoading } = useSWR(
-    `/api/orders/${id}`,
-    fetcher,
-    {
-      fallbackData: initialOrder,
-      refreshInterval: 5000,
-    }
-  );
+  const {
+    data: order,
+    error,
+    isLoading,
+  } = useSWR(`/api/orders/${id}`, fetcher, {
+    fallbackData: initialOrder,
+    refreshInterval: 5000,
+  });
 
   if (error) {
     return <p>Failed to load order.</p>;

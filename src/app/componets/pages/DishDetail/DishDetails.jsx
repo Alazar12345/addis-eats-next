@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import dishes from "../../../data/mockData";
 import "./DishDetails.css";
+import Image from "next/image";
 
 function DishDetails({ addToCart }) {
   const { id } = useParams();
@@ -28,7 +29,13 @@ function DishDetails({ addToCart }) {
   return (
     <div className="dish-details">
       <div className="details-image">
-        <img src={dish.image} alt={dish.name} />
+       <Image
+  src={dish.image}
+  alt={dish.name}
+  width={600}
+  height={450}
+  sizes="(max-width: 768px) 100vw, 600px"
+/>
       </div>
 
       <div className="details-info">

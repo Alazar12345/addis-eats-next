@@ -1,20 +1,18 @@
 "use server";
-import { getSession } from "@/lib/auth";
-import { orderSchema } from "@/lib/schema";
+
+import { getSession } from "@/app/lib/auth";
+import { orderSchema } from "@/app/lib/schema";
 import { revalidatePath } from "next/cache";
+import { addOrder } from "@/app/data/orders";
 
-
-export async function placeOrder(formData) {
-
+export async function placeOrder(previousState, formData) {
   const order = {
     name: formData.get("name"),
     phone: formData.get("phone"),
     address: formData.get("address"),
   };
 
-
   const result = orderSchema.safeParse(order);
-
 
   if (!result.success) {
     return {
@@ -22,13 +20,9 @@ export async function placeOrder(formData) {
     };
   }
 
-
-  // Later this is where you save to database
-  console.log("New order:", result.data);
-
+ 
 
   revalidatePath("/checkout");
-
 
   return {
     success: true,
@@ -37,20 +31,17 @@ export async function placeOrder(formData) {
 }
 
 export async function cancelOrder(orderId) {
-
   const session = await getSession();
-
 
   if (!session) {
     return {
-      error: "Unauthorized"
+      error: "Unauthorized",
     };
   }
-
 
   // check order owner here
 
   return {
-    success: true
+    success: true,
   };
 }

@@ -1,5 +1,6 @@
-import dishes from "@/data/mockData";
-import AddToCartButton from "@/componets/AddToCartButton/AddToCartButton";
+import dishes from "@/app/data/mockData";
+import AddToCartButton from "@/app/componets/AddToCartButton/AddToCartButton";
+import Image from "next/image";
 
 export default async function DishDetailPage({ params }) {
   const { id } = await params;
@@ -16,7 +17,13 @@ export default async function DishDetailPage({ params }) {
 
   return (
     <div>
-      <img src={dish.image} alt={dish.name} width="300"/>
+      <Image
+  src={dish.image}
+  alt={dish.name}
+  width={600}
+  height={450}
+  sizes="(max-width: 768px) 100vw, 600px"
+/>
 
       <h1>{dish.name}</h1>
 

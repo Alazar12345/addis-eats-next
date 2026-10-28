@@ -1,6 +1,7 @@
 import OrderTable from "./OrderTable";
 import orders from "@/app/data/orders";
 
+
 export default async function OrdersPage({ searchParams }) {
    await new Promise((resolve) =>
     setTimeout(resolve, 3000)

@@ -2,6 +2,7 @@ export const menu = [
   {
     id: 1,
     name: "Royal Doro Wat",
+    description: "Slow-cooked chicken stew with berbere spice and boiled egg.",
     price: 650,
     category: "Stews",
     image: "/images/doro.jpg",
@@ -9,6 +10,7 @@ export const menu = [
   {
     id: 2,
     name: "Shekla Tibs",
+    description: "Sizzling beef tibs served on a hot clay plate.",
     price: 720,
     category: "Tibs",
     image: "/images/tibs.jpg",
@@ -16,9 +18,67 @@ export const menu = [
   {
     id: 3,
     name: "Shiro",
+    description: "Creamy chickpea stew seasoned with Ethiopian spices.",
     price: 280,
     category: "Vegetarian",
     image: "/images/shiro.jpg",
   },
+  {
+    id: 4,
+    name: "Kitfo",
+    description: "Finely minced seasoned beef served with ayib and gomen.",
+    price: 760,
+    category: "Traditional",
+    image: "/images/kitfo.jpg",
+  },
+  {
+    id: 5,
+    name: "Gomen Be Sega",
+    description: "Collard greens cooked with tender beef cubes.",
+    price: 430,
+    category: "Stews",
+    image: "/images/gomen.jpg",
+  },
+  {
+    id: 6,
+    name: "Firfir",
+    description: "Shredded injera mixed with spicy berbere sauce.",
+    price: 300,
+    category: "Breakfast",
+    image: "/images/firfir.jpg",
+  },
+  {
+    id: 7,
+    name: "Dulet",
+    description: "Minced beef, liver and tripe sautéed with Ethiopian spices.",
+    price: 520,
+    category: "Traditional",
+    image: "/images/dulet.jpg",
+  },
+  {
+    id: 8,
+    name: "Beyaynetu",
+    description: "A colorful vegetarian platter with a variety of traditional dishes.",
+    price: 420,
+    category: "Vegetarian",
+    image: "/images/beyaynetu.jpg",
+  },
+  {
+    id: 9,
+    name: "Key Wat",
+    description: "Rich and spicy beef stew cooked in berbere sauce.",
+    price: 610,
+    category: "Stews",
+    image: "/images/keywat.jpg",
+  },
+  {
+    id: 10,
+    name: "Chechebsa",
+    description: "Traditional breakfast made with torn flatbread, butter and berbere.",
+    price: 260,
+    category: "Breakfast",
+    image: "/images/chechebsa.jpg",
+  },
 ];
+
 export default menu;

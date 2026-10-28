@@ -8,10 +8,13 @@ const inter = Inter({
 });
 
 export const metadata = {
+  metadataBase: new URL("http://localhost:3000"),
+
   title: {
     default: "Addis Eats",
     template: "%s | Addis Eats",
   },
+
   description:
     "Discover and order Ethiopian dishes from Addis Eats",
 };

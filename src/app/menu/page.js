@@ -3,6 +3,12 @@ import DishList from "@/app/componets/DishList/DishList";
 import FilterShell from "@/app/componets/FilterShell/FilterShell";
 import SearchBox from "./SearchBox";
 
+export const metadata = {
+  title: "Menu",
+  description:
+    "Browse authentic Ethiopian dishes available from Addis Eats.",
+};
+
 export default async function MenuPage({ searchParams }) {
   const params = await searchParams;
 

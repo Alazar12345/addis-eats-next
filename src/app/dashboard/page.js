@@ -1,5 +1,5 @@
 import RevenueChart from "./RevenueChart";
-import orders from "../app/data/orders";
+import orders from "../data/orders";
 
 export default function DashboardPage() {
 

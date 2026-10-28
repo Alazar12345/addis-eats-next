@@ -1,6 +1,11 @@
 import { setSession } from "@/app/lib/session";
 import { redirect } from "next/navigation";
 
+export const metadata = {
+  title: "Sign In",
+  description:
+    "Sign in to your Addis Eats account to manage your orders.",
+}; 
 async function login(formData) {
   "use server";
 

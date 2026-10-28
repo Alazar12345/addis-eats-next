@@ -1,4 +1,4 @@
-import OrderTable from "./OrderTable";
+import OrderTable from "../OrderTable";
 import orders from "@/app/data/orders";
 
 

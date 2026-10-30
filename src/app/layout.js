@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "@/app/componets/Header/Header";
+import Footer from "@/app/componets/Footer/Footer";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -25,6 +26,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

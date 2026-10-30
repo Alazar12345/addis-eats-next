@@ -1,11 +1,83 @@
-.featured-container{
+.featured-section {
 
-display:grid;
+  padding:80px;
 
-grid-template-columns:repeat(3,1fr);
+  background:#faf7f2;
 
-gap:25px;
+}
 
-padding:40px 80px;
+
+/* Section heading */
+
+.featured-section h2 {
+
+  text-align:center;
+
+  font-size:40px;
+
+  font-weight:800;
+
+  color:#3b2414;
+
+  margin-bottom:15px;
+
+}
+
+
+.featured-section p {
+
+  text-align:center;
+
+  color:#666;
+
+  font-size:18px;
+
+  margin-bottom:50px;
+
+}
+
+
+/* Cards layout */
+
+.featured-container {
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:35px;
+
+  max-width:1200px;
+
+  margin:auto;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+  .featured-section {
+
+    padding:50px 20px;
+
+  }
+
+
+  .featured-section h2 {
+
+    font-size:32px;
+
+  }
+
+
+  .featured-container {
+
+    gap:25px;
+
+  }
 
 }

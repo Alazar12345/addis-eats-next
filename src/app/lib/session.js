@@ -3,6 +3,8 @@ import { cookies } from "next/headers";
 const SESSION_COOKIE = "addis_session";
 const SESSION_SECRET = process.env.SESSION_SECRET;
 
+
+
 if (!SESSION_SECRET) {
   throw new Error("SESSION_SECRET is missing.");
 }

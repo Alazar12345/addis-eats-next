@@ -10,7 +10,7 @@ function DishCard({ dish }) {
   const addToCart = useCartStore((state) => state.addToCart);
 
   return (
-    <div className="dish-card" onClick={() => router.push(`/dish/${dish.id}`)}>
+    <div className="dish-card" onClick={() => router.push(`/dishes/${dish.id}`)}>
       <div>
        <Image
         src={dish.image}

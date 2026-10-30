@@ -1,147 +1,139 @@
-
-
 .dish-card {
 
+  background:white;
 
-background:white;
+  border-radius:25px;
 
-border-radius:20px;
+  overflow:hidden;
 
-overflow:hidden;
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.08);
 
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
 
-transition:0.3s;
+  display:flex;
 
-}
-
-
-.dish-card:hover{
-
-transform:translateY(-5px);
+  flex-direction:column;
 
 }
 
 
+.dish-card:hover {
 
-.dish-image{
+  transform:translateY(-8px);
 
-position:relative;
-
-height:220px;
-
-}
-
-
-
-.dish-image img{
-
-width:100%;
-
-height:100%;
-
-object-fit:cover;
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.12);
 
 }
 
 
+/* Image */
 
-.favorite{
+.dish-image {
 
-position:absolute;
+  width:100%;
 
-top:15px;
+  height:240px;
 
-right:15px;
-
-width:35px;
-
-height:35px;
-
-border-radius:50%;
-
-border:none;
-
-background:white;
-
-font-size:20px;
-
-cursor:pointer;
+  overflow:hidden;
 
 }
 
 
+.dish-image img {
 
-.dish-content{
+  width:100%;
 
-padding:20px;
+  height:100%;
 
-}
+  object-fit:cover;
 
-
-
-.dish-content h3{
-
-margin-bottom:8px;
-
-font-size:22px;
+  transition:0.4s;
 
 }
 
 
+.dish-card:hover img {
 
-.dish-content p{
-
-color:#666;
-
-font-size:14px;
-
-line-height:1.5;
+  transform:scale(1.05);
 
 }
 
 
+/* Content */
 
-.dish-footer{
+.dish-info {
 
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-margin-top:20px;
+  padding:25px;
 
 }
 
 
+.dish-info h2 {
 
-.dish-footer span{
+  font-size:24px;
 
-font-size:18px;
+  color:#3b2414;
 
-font-weight:bold;
+  margin-bottom:10px;
 
 }
 
 
+.dish-info p {
 
-.add-btn{
+  color:#666;
 
-width:40px;
+  line-height:1.5;
 
-height:40px;
+  margin-bottom:15px;
 
-border-radius:50%;
+}
 
-border:none;
 
-background:#1F7A5C;
+/* Price */
 
-color:white;
+.dish-price {
 
-font-size:25px;
+  color:#8b4513;
 
-cursor:pointer;
+  font-size:22px;
+
+  font-weight:800;
+
+  margin-bottom:20px;
+
+}
+
+
+/* Button */
+
+.add-btn {
+
+  width:100%;
+
+  padding:13px 20px;
+
+  border-radius:25px;
+
+  background:#1f7a5c;
+
+  color:white;
+
+  font-weight:600;
+
+  font-size:16px;
+
+  transition:0.3s;
+
+}
+
+
+.add-btn:hover {
+
+  background:#155c45;
+
+  transform:translateY(-2px);
 
 }

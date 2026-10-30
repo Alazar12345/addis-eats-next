@@ -23,6 +23,7 @@ export function middleware(request) {
 export const config = {
   matcher: [
     "/checkout",
-    "/orders",
+    "/orders/:path*",
+    "/dashboard/:path*",
   ],
 };

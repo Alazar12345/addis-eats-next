@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import useCartStore from "@/app/store/cartStore";
+import css from "./Header.css"
 
 export default function Header() {
   const cart = useCartStore((state) => state.cart);
@@ -15,13 +16,13 @@ export default function Header() {
         <p>Habesha Restaurant</p>
       </div>
 
-      <nav className="navbar">
+      <div className="nav">
         <Link href="/menu">Menu</Link>
 
-        <Link href="/cart">
+        <Link href="/Cart">
           Cart ({cart.length})
         </Link>
-      </nav>
+      </div>
     </header>
   );
 }

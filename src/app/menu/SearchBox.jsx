@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import useSWR from "swr";
 import fetcher from "@/app/lib/fetcher";
+import "./SearchBox.css";
 
 export default function SearchBox({ initialDishes }) {
   const [input, setInput] = useState("");

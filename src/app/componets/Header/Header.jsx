@@ -22,6 +22,9 @@ export default function Header() {
         <Link href="/Cart">
           Cart ({cart.length})
         </Link>
+        <Link href="/dashboard">
+        Dashboard
+        </Link>
       </div>
     </header>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import useCartStore from "@/app/store/cartStore";
+import "./cart.css";
 
 function Cart() {
   const { cart, removeItem, increaseQuantity, decreaseQuantity } =
@@ -18,11 +19,11 @@ function Cart() {
   }
 
   return (
-    <div>
+    <div className="cart-container">
       <h2>Cart ({cart.length})</h2>
 
       {cart.map((item) => (
-        <div className="cart-items" key={item.id}>
+        <div className="cart-item " key={item.id}>
           <h3>{item.name}</h3>
 
           <p>Price: {item.price} ETB</p>

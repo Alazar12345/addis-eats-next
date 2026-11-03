@@ -1,7 +1,7 @@
 import { menu } from "@/app/data/mockData";
 import DishList from "@/app/componets/DishList/DishList";
 import FilterShell from "@/app/componets/FilterShell/FilterShell";
-import SearchBox from "./SearchBox";
+import "./menu.css";
 
 export const metadata = {
   title: "Menu",
@@ -15,12 +15,10 @@ export default async function MenuPage({ searchParams }) {
   const page = params?.page || 1;
 
   return (
-    <main>
+    <main className="menu-page">
       <h1>Our Menu</h1>
 
-      <p>Page: {page}</p>
-
-      <SearchBox initialDishes={menu} />
+      <p className="page-number">Page: {page}</p>
 
       <FilterShell>
         <DishList dishes={menu} />

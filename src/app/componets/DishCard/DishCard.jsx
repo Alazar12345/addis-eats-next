@@ -1,8 +1,9 @@
 "use client";
+
 import "./DishCard.css";
 import { useRouter } from "next/navigation";
-import useCartStore from "@/app/store/cartStore";
 import Image from "next/image";
+import useCartStore from "@/app/store/cartStore";
 
 function DishCard({ dish }) {
   const router = useRouter();
@@ -10,37 +11,62 @@ function DishCard({ dish }) {
   const addToCart = useCartStore((state) => state.addToCart);
 
   return (
-    <div className="dish-card" onClick={() => router.push(`/dishes/${dish.id}`)}>
-      <div>
-       <Image
-        src={dish.image}
-        alt={dish.name}
-        width={400}
-        height={300}
-        sizes="(max-width: 768px) 100vw, 400px"
-/>
-        <button className="favorite">♡</button>
+    <div
+      className="dish-card"
+      onClick={() => router.push(`/dishes/${dish.id}`)}
+    >
+
+      {/* Image Section */}
+      <div className="dish-image">
+
+        <Image
+          src={dish.image}
+          alt={dish.name}
+          width={400}
+          height={300}
+          sizes="(max-width: 768px) 100vw, 400px"
+        />
+
+
+        <button
+          className="favorite"
+          onClick={(e) => e.stopPropagation()}
+        >
+          ♡
+        </button>
+
       </div>
 
-      <div className="dish-content">
-        <h3>{dish.name}</h3>
 
-        <p>{dish.description}</p>
+      {/* Content Section */}
+      <div className="dish-info">
 
-        <div className="dish-footer">
-          <span>{dish.price} ETB</span>
+        <h2>{dish.name}</h2>
 
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              addToCart(dish);
-            }}
-            className="add-btn"
-          >
-            Add
-          </button>
+
+        <p>
+          {dish.description}
+        </p>
+
+
+        <div className="dish-price">
+          {dish.price} ETB
         </div>
+
+
+        <button
+          className="add-btn"
+          onClick={(e) => {
+            e.stopPropagation();
+            addToCart(dish);
+          }}
+        >
+          Add to Cart
+        </button>
+
+
       </div>
+
     </div>
   );
 }

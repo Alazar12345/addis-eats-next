@@ -1,0 +1,23 @@
+.dish-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .dish-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .dish-list {
+    grid-template-columns: 1fr;
+  }
+}

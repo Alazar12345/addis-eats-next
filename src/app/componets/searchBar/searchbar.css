@@ -53,3 +53,16 @@
 }
 
 }
+.search-bar {
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+
+.search-bar input {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}

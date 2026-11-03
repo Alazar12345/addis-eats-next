@@ -1,0 +1,44 @@
+.menu-page {
+  min-height: 100vh;
+  padding: 50px 40px;
+  background: #fafafa;
+}
+
+
+.menu-page h1 {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+
+.page-number {
+  text-align: center;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+
+/* Keep content centered */
+.menu-page > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+@media (max-width: 600px) {
+  .menu-page {
+  min-height: 100vh;
+  padding: 50px 70px;
+  background: #faf8f5;
+  }
+
+  .menu-page h1 {
+    text-align: center;
+  font-size: 42px;
+  color: #8b4513;
+  margin-bottom: 10px;
+  }
+}
